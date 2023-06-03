@@ -1,6 +1,5 @@
 from time import time
 from flask import Flask, request, redirect, render_template, jsonify
-import json
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from dataclasses import dataclass
