@@ -55,10 +55,6 @@ class Transacao(db.Model):
     def getDict(self):
         return {"id": self.id, "remetente": self.remetente, "recebedor": self.recebedor, "valor": self.valor, "status": self.status}
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 @app.route("/")
 def index():
     return render_template('api.html')
